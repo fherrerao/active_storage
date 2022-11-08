@@ -67,7 +67,7 @@ Para mostrar la imagen adjunta se puede hacer uso del helper `image_tag`, editan
 	<%= image_tag book.image, width: 200 if book.image.attached? %>
 </p>
 ~~~
-La imagen está lista para ser mostrada con un ancho de 200px, el condicional después del 200 es para verificar si existe alguna imagen adjunta, evitando que se rompa la aplicación al querer mostrar una imagen no existente.
+La imagen está lista para ser mostrada y debe tener un ancho de 200px, el condicional después del 200 es para verificar si existe alguna imagen adjunta, evitando que se rompa la aplicación al querer mostrar una imagen no existente.
 Como dato adicional, se debe asegurar que dentro de `books_controller` en el método `book_params` se debe permitir el registro del campo `:image` con esto se generan los permisos para poder guardar la imágen.
 
 ## Probando la aplicación
@@ -76,11 +76,11 @@ Ejecutamos el servidor con:
 
 rails server
 
-y se dirige a la dirección: `https://localhost:3000/books/new` se llena los campos del formulario y adjuntamos un imagen del computador local, el registro del libro se debe realizar satisfactoriamente..
+y se dirige a la dirección: `https://localhost:3000/books/new` se llena los campos del formulario y adjuntamos un imagen del computador local, el registro del libro se debe realizar satisfactoriamente.
 
 ![image](https://user-images.githubusercontent.com/91301423/200691278-c1b2993c-7593-4566-adc0-85cd7c1e9bd2.png)
 
-Once the form is submitted, the new book with its image should be shown.
+Una ves el formulario haya sido enviado, el nuevo registro de libro con su respectiva imagen debe ser mostrada.
 
 ![image](https://user-images.githubusercontent.com/91301423/200692236-baea56eb-fe49-4a95-beb1-430484b549a1.png)
 
@@ -90,5 +90,5 @@ Once the form is submitted, the new book with its image should be shown.
  
 Active Storage facilita y reduce la cantidad de código que se utiliza para administrar imágenes adjuntas.
 
-En el artículo de hoy se ha realizado la configuración de Active Storage con Rails 7 y se lo probó utilizando un formulario básico.
+En este corto artículo se realizó la configuración de Active Storage con Rails 7, además se probó su funcionalidad mediante el uso de un formulario básico.
  
