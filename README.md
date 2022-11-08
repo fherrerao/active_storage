@@ -57,25 +57,38 @@ Se debe cambiar la ruta `root` con el fin de que se ejecute el la interacción d
 root “books#index”
 ~~~
  
-Donde books hace referencia al controlador e index es la acción a ejecutar.
+Donde books hace referencia al controlador e index es la acción a ejecutar. 
  
-Se puede ejecutar el servidor con rails server, aparece la interfaz para crear un nuevo libro, si se llena los campos del formulario y se agrega un imagen local, el registro del libro se debe realizar satisfactoriamente.
-Se debe asegurar que dentro de books_controller en el método book_params se debe permitir el registro del campo :image con esto se generan los permisos para poder guardar la imágen.  
- 
- 
-## Mostrando la imagen adjunta:
-Para mostrar la imagen adjunta se puede hacer uso del helper image_tag, editando el campo correspondiente a la imagen quedaría de la siguiente manera:
+## Editando _book.html.erb
+Para mostrar la imagen adjunta se puede hacer uso del helper `image_tag`, editando el campo correspondiente a la imagen quedaría de la siguiente manera:
 ~~~ 
 <p>
 	<strong>Image:</strong>
 	<%= image_tag book.image, width: 200 if book.image.attached? %>
 </p>
 ~~~
-Se debe mostrar la imagen adjunta con un ancho de 200px, el condicional después del 200 es para verificar si existe alguna imagen adjunta, evitando que se rompa la aplicación al querer mostrar una imagen que no exista. 
+La imagen está lista para ser mostrada con un ancho de 200px, el condicional después del 200 es para verificar si existe alguna imagen adjunta, evitando que se rompa la aplicación al querer mostrar una imagen no existente.
+Como dato adicional, se debe asegurar que dentro de `books_controller` en el método `book_params` se debe permitir el registro del campo `:image` con esto se generan los permisos para poder guardar la imágen.
+
+## Probando la aplicación
+
+Ejecutamos el servidor con:
+
+rails server
+
+y se dirige a la dirección: `https://localhost:3000/books/new` se llena los campos del formulario y adjuntamos un imagen del computador local, el registro del libro se debe realizar satisfactoriamente..
+
+![image](https://user-images.githubusercontent.com/91301423/200691278-c1b2993c-7593-4566-adc0-85cd7c1e9bd2.png)
+
+Once the form is submitted, the new book with its image should be shown.
+
+![image](https://user-images.githubusercontent.com/91301423/200692236-baea56eb-fe49-4a95-beb1-430484b549a1.png)
+
  
  
 ## En resumen
  
 Active Storage facilita y reduce la cantidad de código que se utiliza para administrar imágenes adjuntas.
+
 En el artículo de hoy se ha realizado la configuración de Active Storage con Rails 7 y se lo probó utilizando un formulario básico.
  
