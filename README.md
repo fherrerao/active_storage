@@ -73,10 +73,10 @@ Como dato adicional, se debe asegurar que dentro de `books_controller` en el mé
 ## Probando la aplicación
 
 Ejecutamos el servidor con:
-
+~~~
 rails server
-
-y se dirige a la dirección: `https://localhost:3000/books/new` se llena los campos del formulario y adjuntamos un imagen del computador local, el registro del libro se debe realizar satisfactoriamente.
+~~~
+para luego dirigirse a la dirección: `https://localhost:3000/books/new` se llena los campos del formulario y adjuntamos un imagen del computador local, el registro del libro se debe realizar satisfactoriamente.
 
 ![image](https://user-images.githubusercontent.com/91301423/200691278-c1b2993c-7593-4566-adc0-85cd7c1e9bd2.png)
 
