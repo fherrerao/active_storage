@@ -24,11 +24,11 @@ rails active_storage:install
 ~~~
 Este comando va a generar una migración y creará una tabla donde se van a guardar las rutas de todos los archivos que se suban, no se guarda el archivo en si en la base de datos, este se va a almacenar en el disco duro si se trabaja de forma local, o en un almacenamiento en la nube si se lo lleva a producción.
  
-Creamos la base de datos con:
+Se crea la base de datos con:
 ~~~
 rails db:create
 ~~~
-y generamos las migraciones:
+posteriormente se generan las migraciones:
 ~~~
 rails db:migrate
 ~~~
@@ -57,7 +57,7 @@ Se debe cambiar la ruta `root` con el fin de que se ejecute el la interacción d
 root “books#index”
 ~~~
  
-Donde books hace referencia al controlador e index es la acción a ejecutar. 
+donde books hace referencia al controlador e index es la acción a ejecutar. 
  
 ## Editando _book.html.erb
 Para mostrar la imagen adjunta se puede hacer uso del helper `image_tag`, editando el campo correspondiente a la imagen quedaría de la siguiente manera:
