@@ -1,4 +1,4 @@
-# Active Storage
+# Adjuntar imágenes con Active Storage en Rails 7
 
 Active Storage es una herramienta de Rails que facilita el adjuntar archivos y almacenarlos ya sea de forma local (intranet) en tu ordenador o a plataformas en la nube como AWS, Google Cloud Storage, Microsoft Azure Storage, Digital Ocean, entre otros.
  
