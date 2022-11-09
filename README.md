@@ -6,7 +6,7 @@ En este artículo se va a realizar un proyecto desde cero utilizando Scaffold qu
  
 ## Creando proyecto de libros
  
-Vamos a crear el proyecto utilizando PostgreSql como base de datos, para lo cual ejecutamos desde un terminal el siguiente comando:
+Se crea el proyecto utilizando PostgreSql como base de datos, para lo cual se ejecuta desde un terminal el siguiente comando:
 ~~~ 
 rails new books_storage - -database postgresql
 ~~~
